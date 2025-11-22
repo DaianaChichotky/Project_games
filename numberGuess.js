@@ -1,6 +1,6 @@
 const args = process.argv.slice(2);
 const num1 = parseFloat(args[0]);
-const randomNum = Math.floor(Math.random() * (101 - 0) + 0); // 0-100 inclusive
+const randomNum = Math.floor(Math.random() * (11 - 1) + 1); // 1-10 inclusive
 
 if (args.length !== 1) {
   console.error('Please provide exactly 1 number');
