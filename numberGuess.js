@@ -23,5 +23,5 @@ if (num1 < randomNum) {
 } else if (num1 > randomNum) {
   console.log('Too high! Try again');
   return;
-} else console.log('Correct! You found it in 3 tries!');
+} else console.log('Correct! You found it !');
 return;
