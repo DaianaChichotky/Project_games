@@ -1,7 +1,7 @@
-const args = process.argv.slice(2); //process.argv[2] is the text that the user writes after the 'node rockpaperscissors.js'
+const args = process.argv.slice(2);
 
 const validChoices = ['rock', 'paper', 'scissors'];
-const userChoice = args[0].toLowerCase(); //lower case the first argument of the array
+const userChoice = args[0].toLowerCase();
 const computerChoice = validChoices[Math.floor(Math.random() * 3)];
 
 if (!userChoice || !validChoices.includes(userChoice)) {
