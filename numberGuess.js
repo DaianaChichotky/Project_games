@@ -1,5 +1,5 @@
 const args = process.argv.slice(2);
-const num1 = parseFloat(args[0]);
+const num1 = parseInt(args[0]);
 const randomNum = Math.floor(Math.random() * (11 - 1) + 1); // 1-10 inclusive
 
 if (args.length !== 1) {
@@ -10,8 +10,8 @@ if (args.length !== 1) {
 if (isNaN(num1)) {
   console.error('Invalid input. Please enter a number.');
   return;
-} else if (num1 > 100 || num1 < 0) {
-  console.error('Guess must be between 1 and 100.');
+} else if (num1 > 10 || num1 < 0) {
+  console.error('Guess must be between 1 and 10.');
   return;
 }
 
