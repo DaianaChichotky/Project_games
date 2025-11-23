@@ -1,14 +1,11 @@
-const args = process.argv.slice(2); //process.argv[2] is the text that the user writes after the 'node palindrome.js'
+const args = process.argv.slice(2);
 
-const phrase = args.join(' ').toLowerCase(); //join all in just 1 string and put all in lower case: ["Hola Que tal?"] --> ["hola que tal?"]
-const word = phrase.split(' ').join(''); // remove spaces and join removing spaces: ["hola que tal?"] --> ["hola", "que", "tal", "?"] --> "holaquetal?""
+const word = args.join('').toLowerCase(); //join all in just 1 string and put all in lower case.
 
 if (!word || word === '') {
   console.log('Please enter text.');
   return;
 }
-
-// Resto de tu código para chequear palíndromo
 
 let isPalindrome = true;
 
