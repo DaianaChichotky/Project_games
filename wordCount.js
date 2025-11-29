@@ -11,6 +11,7 @@ if (!phrase || phrase.trim() === '') {
 
 //split the phrase into words
 const words = phrase.split(' ').filter((word) => word !== '');
+//console.log(words);
 
 const countWords = {};
 
