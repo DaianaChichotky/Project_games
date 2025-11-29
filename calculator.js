@@ -2,6 +2,7 @@ const args = process.argv.slice(2);
 
 if (args.length !== 3) {
   console.error('Please provide exactly 2 numbers and 1 operator (+, -, *, /');
+  console.error('The structure must be: number opeator number');
   return;
 }
 
@@ -11,6 +12,7 @@ const num2 = parseFloat(args[2]);
 
 if (isNaN(num1) || isNaN(num2)) {
   console.error('Both arguments must be numbers');
+  console.error('The structure must be: number operator number');
   return;
 }
 
