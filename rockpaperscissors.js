@@ -1,13 +1,16 @@
 const args = process.argv.slice(2);
 
 const validChoices = ['rock', 'paper', 'scissors'];
-const userChoice = args[0].toLowerCase();
-const computerChoice = validChoices[Math.floor(Math.random() * 3)];
+const userChoice = args[0]?.toLowerCase(); //the "?" is to avoid error if user leave the argument empty
+const computerChoice =
+  validChoices[Math.floor(Math.random() * validChoices.length)];
 
 if (!userChoice || !validChoices.includes(userChoice)) {
   console.log('Invalid move. Use rock, paper, or scissors.');
   return;
 }
+
+let resultText;
 
 if (userChoice === computerChoice) {
   resultText = 'Draw';
