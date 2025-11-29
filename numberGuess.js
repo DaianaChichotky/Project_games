@@ -1,5 +1,5 @@
 const args = process.argv.slice(2);
-const num1 = parseInt(args[0]);
+const num1 = Math.round(args[0]); // round number
 const randomNum = Math.floor(Math.random() * (11 - 1) + 1); // 1-10 inclusive
 
 if (args.length !== 1) {
@@ -15,13 +15,13 @@ if (isNaN(num1)) {
   return;
 }
 
-console.log(`You number is ${num1} and randonNum is ${randomNum}`);
+console.log(`You number is ${num1} and random number is ${randomNum}.`);
 
 if (num1 < randomNum) {
   console.log('Too low! Try again.');
   return;
 } else if (num1 > randomNum) {
-  console.log('Too high! Try again');
+  console.log('Too high! Try again.');
   return;
 } else console.log('Correct! You found it !');
 return;
