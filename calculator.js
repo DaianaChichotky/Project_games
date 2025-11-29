@@ -2,16 +2,18 @@ const args = process.argv.slice(2);
 
 if (args.length !== 3) {
   console.error('Please provide exactly 2 numbers and 1 operator (+, -, *, /');
-  console.error('The structure must be: number opeator number');
+  console.error('The structure must be: number operator number');
   return;
 }
 
-const num1 = parseFloat(args[0]);
+const num1 = parseFloat(args[0]); //parseFloat is to convert string to float
 const operator = args[1];
 const num2 = parseFloat(args[2]);
 
-if (isNaN(num1) || isNaN(num2)) {
-  console.error('Both arguments must be numbers');
+if (isNaN(num1) || isNaN(num2) || !['+', '-', '*', '/'].includes(operator)) {
+  console.error(
+    'Both arguments must be numbers and a valid operator (+, -, *, /)'
+  );
   console.error('The structure must be: number operator number');
   return;
 }
