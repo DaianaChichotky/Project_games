@@ -15,7 +15,7 @@ if (isNaN(num1)) {
   return;
 }
 
-console.log(`You number is ${num1} and random number is ${randomNum}.`);
+console.log(`Your number is ${num1}, and random number is ${randomNum}.`);
 
 if (num1 < randomNum) {
   console.log('Too low! Try again.');
